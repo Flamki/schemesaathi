@@ -1,4 +1,4 @@
-const DEFAULT_MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+const DEFAULT_MODEL = (process.env.GEMINI_MODEL || "gemini-2.0-flash").trim() || "gemini-2.0-flash";
 
 function getTextFromGemini(data) {
   const parts = data?.candidates?.[0]?.content?.parts;
