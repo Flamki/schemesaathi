@@ -1084,22 +1084,21 @@ const Landing = ({ setPage }) => {
       </section>
 
       {/* STORIES */}
-      <section className="ss-section-pad" style={{ background:C.forest, padding:"92px 28px", position:"relative", overflow:"hidden" }}>
+      <section className="ss-section-pad" style={{ background:C.forest, padding:"92px 28px", position:"relative", overflow:"hidden", display:"none" }}>
         <div style={{ position:"absolute", top:-50, left:-50 }}><Rangoli size={380} opacity={0.06} color="#F4A523"/></div>
         <div style={{ position:"absolute", bottom:-70, right:-50 }}><Rangoli size={320} opacity={0.05} color="#fff"/></div>
         <div ref={r3} className={`ss-reveal ${v3 ? "visible" : ""}`} style={{ maxWidth:1100, margin:"0 auto", position:"relative", zIndex:1 }}>
           <div style={{ textAlign:"center", marginBottom:56 }}>
-            <span className="ss-tag" style={{ background:"rgba(244,165,35,0.2)", color:C.amber }}>Real Impact</span>
+            <span className="ss-tag" style={{ background:"rgba(244,165,35,0.2)", color:C.amber }}>Credibility First</span>
             <h2 style={{ fontSize:"clamp(28px,4vw,48px)", color:"#fff", marginTop:14 }}>
-              Lives changed by knowing{" "}
-              <span style={{ fontStyle:"italic", color:C.amber }}>their rights</span>
+              Built for <span style={{ fontStyle:"italic", color:C.amber }}>trust and verification</span>
             </h2>
           </div>
           <div className="ss-story-grid" style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))", gap:20 }}>
             {[
-              { n:"Ramabai Patil", s:"Maharashtra", o:"Daily wage worker", e:"👩", q:"Mujhe pata hi nahi tha ki itni saari yojanaayein hain. Abhi meri beti ka ilaaj free mein ho raha hai Ayushman Card se.", schemes:6, val:"₹5.12L/yr" },
-              { n:"Ranjit Singh", s:"Punjab", o:"Small-scale farmer", e:"👨‍🌾", q:"PM Kisan ke paise se maine pump set kharida. Ab irrigation cost 40% kam ho gayi. Bahut fayda hua parivar ko.", schemes:4, val:"₹12,000/yr" },
-              { n:"Sunita Devi", s:"Bihar", o:"Street vendor", e:"👩‍🦱", q:"SVANidhi loan se meri theli badi ho gayi. Aur PMJAY se bacche ki surgery bhi bilkul free mein ho gayi.", schemes:5, val:"₹58,600" },
+              { n:"Removed", s:"Removed", o:"Removed", e:"-", q:"Removed", schemes:0, val:"-" },
+              { n:"Removed", s:"Removed", o:"Removed", e:"-", q:"Removed", schemes:0, val:"-" },
+              { n:"Removed", s:"Removed", o:"Removed", e:"-", q:"Removed", schemes:0, val:"-" },
             ].map((story, i) => (
               <div key={i} className="story-card" style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.1)", borderRadius:R.xl, padding:32, backdropFilter:"blur(8px)" }}>
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:20 }}>
@@ -1125,6 +1124,38 @@ const Landing = ({ setPage }) => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CREDIBILITY */}
+      <section className="ss-section-pad" style={{ background:C.forest, padding:"92px 28px", position:"relative", overflow:"hidden" }}>
+        <div style={{ position:"absolute", top:-50, left:-50 }}><Rangoli size={380} opacity={0.06} color="#F4A523"/></div>
+        <div style={{ position:"absolute", bottom:-70, right:-50 }}><Rangoli size={320} opacity={0.05} color="#fff"/></div>
+        <div ref={r3} className={`ss-reveal ${v3 ? "visible" : ""}`} style={{ maxWidth:1100, margin:"0 auto", position:"relative", zIndex:1 }}>
+          <div style={{ textAlign:"center", marginBottom:56 }}>
+            <span className="ss-tag" style={{ background:"rgba(244,165,35,0.2)", color:C.amber }}>Credibility First</span>
+            <h2 style={{ fontSize:"clamp(28px,4vw,48px)", color:"#fff", marginTop:14 }}>
+              Built for <span style={{ fontStyle:"italic", color:C.amber }}>trust and verification</span>
+            </h2>
+          </div>
+          <div className="ss-story-grid" style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))", gap:20 }}>
+            {[
+              { icon:"✅", title:"Rule-based matching", desc:"Recommendations are generated from explicit policy criteria such as age, income, occupation, and category." },
+              { icon:"🔗", title:"Official-source workflow", desc:"Each scheme includes portal links, helplines, document checklist, and practical application steps." },
+              { icon:"🧭", title:"Real-world usability", desc:"Designed for online plus offline journeys through CSCs and official government channels." },
+            ].map((item, i) => (
+              <div key={i} className="story-card" style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.1)", borderRadius:R.xl, padding:32, backdropFilter:"blur(8px)" }}>
+                <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14 }}>
+                  <div style={{ width:48, height:48, background:"linear-gradient(135deg,#D4560A,#F4A523)", borderRadius:14, display:"grid", placeItems:"center", fontSize:22, flexShrink:0 }}>{item.icon}</div>
+                  <div style={{ fontWeight:600, fontSize:18, color:"#fff" }}>{item.title}</div>
+                </div>
+                <p style={{ fontSize:15, color:"rgba(255,255,255,0.7)", lineHeight:1.75, fontWeight:300 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ textAlign:"center", marginTop:20, color:"rgba(255,255,255,0.45)", fontSize:12 }}>
+            Personal testimonials are not shown unless independently verified.
+          </p>
         </div>
       </section>
 
